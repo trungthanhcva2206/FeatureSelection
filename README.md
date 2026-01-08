@@ -26,7 +26,7 @@ All CSVs place the label in the first column and features afterward.
 ## Algorithms (manual implementations)
 - `variance_threshold.py`: drop features with variance below threshold or keep top-k by variance.
 - `chi_square.py`: Chi-square per feature. Two modes: binned (quantile bins) or raw non-negative shift (sklearn-style when `--use-raw`).
-- `mutual_information.py`: Mutual information per feature. Two modes: quantile binning or k-NN estimator via sklearn when `--use-knn`.
+- `mutual_information.py`: Mutual information per feature. Modes: quantile binning; k-NN estimator via sklearn when `--use-knn`; or manual k-NN (no sklearn) when `--use-knn-manual`.
 - `pearson_correlation.py`: Pearson correlation (optionally absolute) between feature and label-coded numeric.
 - `relief_f.py`: ReliefF with k-NN hits/misses after min-max scaling.
 
@@ -62,18 +62,42 @@ All CSVs place the label in the first column and features afterward.
 
 ## Binning vs non-binning
 - Chi-square
-	- Binned (default manual): quantile bins turn continuous feature into categories; can change ranking when values are dense; safer for raw signed data without shifting.
-	- Non-binned (`--use-raw`, manual) and sklearn: shift each feature to non-negative then treat values as counts; matches sklearn `chi2` behavior.
-- Mutual information
-	- Binned (manual default): quantile discretization + discrete MI; sensitive to bin count.
-	- Non-binned (`--use-knn`, manual) and sklearn: k-NN estimator on continuous data; no bins.
+	- Binned (manual default): quantile bins create a contingency table that tolerates signed values and outliers; reduces noise when $n \ll d$ but may blur fine-grained signal if bins are too coarse.
+	- Non-binned (`--use-raw`, manual) and sklearn: per-feature min-shift to non-negative then treat magnitudes as counts; preserves ordering and spacing but requires data to be non-negative after shifting.
+ - Mutual information
+	- Binned (manual default): plug-in estimate on quantile bins; low-variance when $n$ is tiny, but bias grows as bins increase and boundaries can move with each dataset split.
+	- Non-binned k-NN (`--use-knn` / `--use-knn-manual`): continuous estimator; keeps local geometry, less sensitive to arbitrary bin edges, but higher variance when $n$ is very small; choose larger `--n-neighbors` to smooth.
+ - ReliefF
+	- Always non-binned; distances use min–max scaling so magnitude differences are preserved. Binning would break neighborhood structure, so it is intentionally avoided.
+
+**Khi nên bin**
+- Dữ liệu có giá trị âm hoặc nhiều ngoại lệ, cần tránh bước shift không âm (chi-square). 
+- Số mẫu rất nhỏ, muốn giảm nhiễu bằng cách gom nhóm giá trị liên tục.
+
+**Khi không nên bin**
+- Cần giữ thứ tự và độ lớn gốc (MI k-NN, chi-square dạng raw, ReliefF). 
+- Dữ liệu đủ sạch/đủ mẫu để ước lượng liên tục ổn định; tránh sai lệch do ranh giới bin tùy ý.
+
+**Tóm tắt so sánh**
+- Binned: giảm phương sai, thêm bias do ranh giới; an toàn cho dữ liệu âm và nhiễu; phù hợp khi $n$ rất nhỏ hoặc cần diễn giải bằng bảng đếm.
+- Non-binned: giữ cấu trúc liên tục, tránh bias bin; cần chuẩn hóa/shift thích hợp và cẩn trọng với ngoại lệ; hiệu quả hơn khi số mẫu vừa đủ và muốn tận dụng khoảng cách/k-láng giềng.
+
+## Kết quả gần đây (adenocarcinoma)
+| Algorithm | Chế độ | Metric | k chọn | Điểm | Tham số chính | Log |
+| --- | --- | --- | ---: | ---: | --- | --- |
+| Mutual Information (manual k-NN) | Non-bin (`--use-knn-manual`, n=3) | Accuracy (CV 5-fold) | 500 | 0.9208 | `n_neighbors=3` | [mi_sklearn_log.txt](mi_sklearn_log.txt#L1-L9)
+| Mutual Information (manual k-NN) | Non-bin (`--use-knn-manual`, n=3) | Macro-F1 (CV 5-fold) | 500 | 0.8336 | `n_neighbors=3` | [mi_log.txt](mi_log.txt#L1-L8)
+| ReliefF (manual) | Non-bin | Accuracy (CV grid) | 10 | 0.9467 | `n_neighbors=10` | [rf_sklearn_log.txt](rf_sklearn_log.txt#L1-L10)
+| ReliefF (manual) | Non-bin | Macro-F1 (CV grid) | 10 | 0.8519 | `n_neighbors=10` | [rf_log.txt](rf_log.txt#L1-L10)
 
 ## Usage examples
 - Manual Chi-square, sklearn-style raw, CV over k: 
 	`python chi_square.py Data/adenocarcinoma.csv --use-raw --cv-topk-grid 10,50,100,500,1000,2000,5000,7000 --cv-folds 5 --cv-metric accuracy --log-file chi_log.txt`
 - Sklearn Chi-square: 
 	`python sklearn_chi_square.py Data/adenocarcinoma.csv --cv-topk-grid 10,50,100,500,1000,2000,5000,7000 --cv-folds 5 --cv-metric accuracy --log-file chi_sklearn_log.txt`
-- Manual MI with k-NN (no bins): 
+- Manual MI with k-NN (no bins, manual estimator): 
+	`python mutual_information.py Data/adenocarcinoma.csv --use-knn-manual --n-neighbors 3 --cv-topk-grid 10,50,100,500,1000,2000,5000,7000 --log-file mi_manual_knn_log.txt`
+- Manual MI with k-NN (no bins, sklearn estimator): 
 	`python mutual_information.py Data/adenocarcinoma.csv --use-knn --n-neighbors 3 --cv-topk-grid 10,50,100,500,1000,2000,5000,7000 --log-file mi_manual_log.txt`
 - Sklearn MI: 
 	`python sklearn_mutual_information.py Data/adenocarcinoma.csv --n-neighbors 3 --cv-topk-grid 10,50,100,500,1000,2000,5000,7000 --log-file mi_sklearn_log.txt`

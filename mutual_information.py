@@ -54,12 +54,17 @@ def mi_scores(
     smoothing: float = 1e-9,
     use_knn: bool = False,
     n_neighbors: int = 3,
+    use_knn_manual: bool = False,
 ) -> np.ndarray:
     """Estimate MI per feature.
 
     - use_knn=True: use sklearn's k-NN MI estimator (continuous), no binning.
+    - use_knn_manual=True: custom k-NN estimator (continuous), no sklearn.
     - else: discretize into quantile bins and compute MI on counts.
     """
+
+    if use_knn_manual:
+        return _mi_knn_manual(X, y, k=n_neighbors)
 
     if use_knn:
         if not SKLEARN_MI_AVAILABLE:
@@ -111,6 +116,61 @@ def mi_scores(
     return scores
 
 
+def _mi_knn_manual(X: np.ndarray, y: np.ndarray, k: int = 3) -> np.ndarray:
+    """Manual k-NN MI estimator for continuous features and discrete labels.
+
+    For each feature (1D), we estimate $I(X;Y) = H(Y) - E[H(Y|X=x)]$ where
+    $H(Y|X=x)$ is approximated from the class distribution within the k-nearest
+    neighbors (including the point itself) based on absolute distance in X.
+
+    This is a simple, local-probability estimator (not a full Kraskov), but it
+    avoids sklearn dependency and works reasonably on small n.
+    """
+
+    y = np.asarray(y)
+    X = np.asarray(X)
+    n_samples, n_features = X.shape
+    if n_samples == 0:
+        return np.zeros(n_features, dtype=float)
+
+    # Global label entropy H(Y)
+    unique, counts = np.unique(y, return_counts=True)
+    p_y = counts / counts.sum()
+    H_y = -np.sum(p_y * np.log(p_y + 1e-12))
+
+    scores = np.zeros(n_features, dtype=float)
+
+    for j in range(n_features):
+        col = X[:, j]
+
+        # Constant feature => MI = 0
+        if np.all(col == col[0]):
+            scores[j] = 0.0
+            continue
+
+        # For each sample, find epsilon = distance to k-th neighbor (include self)
+        # Then collect neighbors within epsilon and compute local label entropy.
+        H_cond_list: list[float] = []
+        for idx in range(n_samples):
+            dists = np.abs(col - col[idx])
+            # kth neighbor distance (k includes self, so need k-th smallest)
+            k_eff = min(k, n_samples)
+            eps = np.partition(dists, k_eff - 1)[k_eff - 1]
+            # neighbors within eps (inclusive)
+            neigh_mask = dists <= eps + 1e-12
+            neigh_labels = y[neigh_mask]
+            cnts = np.bincount(neigh_labels.astype(int), minlength=int(unique.max()) + 1)
+            cnts = cnts[cnts > 0]
+            p_local = cnts / cnts.sum()
+            H_local = -np.sum(p_local * np.log(p_local + 1e-12))
+            H_cond_list.append(H_local)
+
+        H_cond = float(np.mean(H_cond_list)) if H_cond_list else 0.0
+        scores[j] = max(H_y - H_cond, 0.0)
+
+    return scores
+
+
 def select_features(
     scores: np.ndarray,
     feature_names: Iterable[str],
@@ -144,6 +204,7 @@ def run(
     cv_metric: str,
     use_knn: bool,
     n_neighbors: int,
+    use_knn_manual: bool,
 ) -> None:
     X, y, feature_names = load_dataset(csv_path)
 
@@ -153,6 +214,7 @@ def run(
         bins=bins,
         use_knn=use_knn,
         n_neighbors=n_neighbors,
+        use_knn_manual=use_knn_manual,
     )
 
     cv_summary = None
@@ -220,7 +282,8 @@ def run(
     )
     X_selected = X[:, mask]
 
-    stats = MIScores(mi_scores=scores, bins_used=bins)
+    bins_used = 0 if use_knn_manual or use_knn else bins
+    stats = MIScores(mi_scores=scores, bins_used=bins_used)
     result = MIResult(
         selected_mask=mask,
         selected_feature_names=selected_names,
@@ -234,7 +297,12 @@ def run(
     report_lines.append(f"Dataset: {csv_path.name}")
     report_lines.append(f"Samples: {X.shape[0]} | Features: {X.shape[1]}")
     mode = f"top_k={top_k}" if top_k is not None else f"threshold={threshold}"
-    detail = f"knn n_neighbors={n_neighbors}" if use_knn else f"bins={bins}"
+    if use_knn_manual:
+        detail = f"knn-manual n_neighbors={n_neighbors}"
+    elif use_knn:
+        detail = f"knn n_neighbors={n_neighbors}"
+    else:
+        detail = f"bins={bins}"
     report_lines.append(f"Selection mode: {mode} | {detail}")
     report_lines.append(
         f"Selected features: {len(result.selected_feature_names)} / {len(feature_names)}"
@@ -295,10 +363,15 @@ if __name__ == "__main__":
         help="Use sklearn k-NN MI estimator (continuous, no binning)",
     )
     parser.add_argument(
+        "--use-knn-manual",
+        action="store_true",
+        help="Use manual k-NN MI estimator (continuous, no sklearn)",
+    )
+    parser.add_argument(
         "--n-neighbors",
         type=int,
         default=3,
-        help="Number of neighbors for k-NN MI (only when --use-knn)",
+        help="Number of neighbors for k-NN MI",
     )
     parser.add_argument(
         "--log-file",
@@ -341,4 +414,5 @@ if __name__ == "__main__":
         cv_metric=args.cv_metric,
         use_knn=args.use_knn,
         n_neighbors=args.n_neighbors,
+        use_knn_manual=args.use_knn_manual,
     )
