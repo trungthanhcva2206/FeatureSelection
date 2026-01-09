@@ -72,7 +72,8 @@ def variance_threshold(
         variances_after_norm = None
         used_variances = variances
 
-    mask = used_variances >= threshold
+    # Match sklearn VarianceThreshold behavior: drop features with variance <= threshold
+    mask = used_variances > threshold
     selected_feature_names = [name for name, keep in zip(feature_names, mask) if keep]
     X_selected = X[:, mask]
 

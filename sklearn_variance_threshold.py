@@ -61,12 +61,14 @@ def run(
 ) -> None:
     X, y, feature_names = load_dataset(csv_path)
 
+    # Prepare data: normalize if needed
+    X_work = X.copy()
     if normalize:
         scaler = StandardScaler()
-        X_norm = scaler.fit_transform(X)
-        variances = X_norm.var(axis=0)
-    else:
-        variances = X.var(axis=0)
+        X_work = scaler.fit_transform(X_work)
+    
+    # Compute variances for reporting
+    variances = X_work.var(axis=0)
 
     cv_summary = None
     if cv_topk_grid:
@@ -114,10 +116,14 @@ def run(
         top_k = best_k
         cv_summary = {"scores": cv_scores, "best_k": best_k, "best_score": best_score}
 
+    # Feature selection: use sklearn's VarianceThreshold or top-k
     if top_k is not None:
         mask = select_by_top_k(variances, top_k)
     else:
-        mask = variances >= threshold
+        # Use sklearn's VarianceThreshold
+        vt = VarianceThreshold(threshold=threshold)
+        vt.fit(X_work)
+        mask = vt.get_support()
 
     selected_names = [name for name, keep in zip(feature_names, mask) if keep]
     X_selected = X[:, mask]
