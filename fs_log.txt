@@ -1,0 +1,66 @@
+Timestamp: 2026-01-16T09:43:04
+Dataset: PredictStudent.csv
+Samples: 4424 | Features: 36
+Method: Forward Selection
+Max features: 5
+Min improvement: 0.01
+CV folds: 5 | Metric: accuracy
+Selected features: 3 / 36
+
+Selection history:
+  Step 1: Curricular units 2nd sem (approved) → accuracy=0.7123
+  Step 2: Tuition fees up to date → accuracy=0.7267
+  Step 3: Curricular units 2nd sem (enrolled) → accuracy=0.7401
+
+Final selected features:
+Curricular units 2nd sem (approved), Tuition fees up to date, Curricular units 2nd sem (enrolled)
+
+Final accuracy: 0.7401
+
+---
+
+Timestamp: 2026-01-16T09:44:17
+Dataset: PredictStudent.csv
+Samples: 4424 | Features: 36
+Method: Forward Selection
+Max features: 10
+Min improvement: 0.01
+CV folds: 5 | Metric: accuracy
+Selected features: 3 / 36
+
+Selection history:
+  Step 1: Curricular units 2nd sem (approved) → accuracy=0.7123
+  Step 2: Tuition fees up to date → accuracy=0.7267
+  Step 3: Curricular units 2nd sem (enrolled) → accuracy=0.7401
+
+Final selected features:
+Curricular units 2nd sem (approved), Tuition fees up to date, Curricular units 2nd sem (enrolled)
+
+Final accuracy: 0.7401
+
+---
+
+Timestamp: 2026-01-16T09:52:57
+Dataset: PredictStudent.csv
+Samples: 4424 | Features: 36
+Method: Forward Selection
+Max features: 10
+Min improvement: 0.0
+CV folds: 5 | Metric: accuracy
+Selected features: 6 / 36
+
+Selection history:
+  Step 1: Curricular units 2nd sem (approved) → accuracy=0.7123
+  Step 2: Tuition fees up to date → accuracy=0.7267
+  Step 3: Curricular units 2nd sem (enrolled) → accuracy=0.7401
+  Step 4: Age at enrollment → accuracy=0.7500
+  Step 5: Curricular units 1st sem (approved) → accuracy=0.7568
+  Step 6: Curricular units 1st sem (enrolled) → accuracy=0.7604
+
+Final selected features:
+Curricular units 2nd sem (approved), Tuition fees up to date, Curricular units 2nd sem (enrolled), Age at enrollment, Curricular units 1st sem (approved), Curricular units 1st sem (enrolled)
+
+Final accuracy: 0.7604
+
+---
+

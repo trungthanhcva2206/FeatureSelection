@@ -1,0 +1,79 @@
+Timestamp: 2026-01-16T09:48:16
+Dataset: PredictStudent.csv
+Samples: 4424 | Features: 36
+Method: Backward Elimination
+Min features: 5
+Max degradation: 0.01
+CV folds: 5 | Metric: accuracy
+Selected features: 5 / 36
+
+Elimination history:
+  Step 1: Removed Mother's qualification → accuracy=0.7651
+  Step 2: Removed Curricular units 2nd sem (evaluations) → accuracy=0.7665
+  Step 3: Removed Curricular units 1st sem (grade) → accuracy=0.7694
+  Step 4: Removed Curricular units 2nd sem (credited) → accuracy=0.7717
+  Step 5: Removed Marital status → accuracy=0.7722
+  Step 6: Removed Educational special needs → accuracy=0.7728
+  Step 7: Removed International → accuracy=0.7737
+  Step 8: Removed Curricular units 2nd sem (without evaluations) → accuracy=0.7742
+  Step 9: Removed Nacionality → accuracy=0.7744
+  Step 10: Removed GDP → accuracy=0.7746
+  Step 11: Removed Curricular units 1st sem (enrolled) → accuracy=0.7751
+  Step 12: Removed Daytime/evening attendance	 → accuracy=0.7751
+  Step 13: Removed Father's occupation → accuracy=0.7749
+  Step 14: Removed Inflation rate → accuracy=0.7751
+  Step 15: Removed Previous qualification → accuracy=0.7744
+  Step 16: Removed Application mode → accuracy=0.7733
+  Step 17: Removed Application order → accuracy=0.7719
+  Step 18: Removed Father's qualification → accuracy=0.7715
+  Step 19: Removed Curricular units 1st sem (evaluations) → accuracy=0.7735
+  Step 20: Removed Gender → accuracy=0.7724
+  Step 21: Removed Previous qualification (grade) → accuracy=0.7737
+  Step 22: Removed Debtor → accuracy=0.7719
+  Step 23: Removed Admission grade → accuracy=0.7710
+  Step 24: Removed Displaced → accuracy=0.7712
+  Step 25: Removed Curricular units 1st sem (without evaluations) → accuracy=0.7701
+  Step 26: Removed Mother's occupation → accuracy=0.7683
+  Step 27: Removed Unemployment rate → accuracy=0.7656
+  Step 28: Removed Scholarship holder → accuracy=0.7658
+  Step 29: Removed Course → accuracy=0.7606
+  Step 30: Removed Age at enrollment → accuracy=0.7561
+  Step 31: Removed Curricular units 1st sem (credited) → accuracy=0.7538
+
+Final selected features:
+Tuition fees up to date, Curricular units 1st sem (approved), Curricular units 2nd sem (enrolled), Curricular units 2nd sem (approved), Curricular units 2nd sem (grade)
+
+Final accuracy: 0.7538
+
+---
+
+Timestamp: 2026-01-16T09:51:36
+Dataset: PredictStudent.csv
+Samples: 4424 | Features: 36
+Method: Backward Elimination
+Min features: 5
+Max degradation: 0.0
+CV folds: 5 | Metric: accuracy
+Selected features: 24 / 36
+
+Elimination history:
+  Step 1: Removed Mother's qualification → accuracy=0.7651
+  Step 2: Removed Curricular units 2nd sem (evaluations) → accuracy=0.7665
+  Step 3: Removed Curricular units 1st sem (grade) → accuracy=0.7694
+  Step 4: Removed Curricular units 2nd sem (credited) → accuracy=0.7717
+  Step 5: Removed Marital status → accuracy=0.7722
+  Step 6: Removed Educational special needs → accuracy=0.7728
+  Step 7: Removed International → accuracy=0.7737
+  Step 8: Removed Curricular units 2nd sem (without evaluations) → accuracy=0.7742
+  Step 9: Removed Nacionality → accuracy=0.7744
+  Step 10: Removed GDP → accuracy=0.7746
+  Step 11: Removed Curricular units 1st sem (enrolled) → accuracy=0.7751
+  Step 12: Removed Daytime/evening attendance	 → accuracy=0.7751
+
+Final selected features:
+Application mode, Application order, Course, Previous qualification, Previous qualification (grade), Father's qualification, Mother's occupation, Father's occupation, Admission grade, Displaced, Debtor, Tuition fees up to date, Gender, Scholarship holder, Age at enrollment, Curricular units 1st sem (credited), Curricular units 1st sem (evaluations), Curricular units 1st sem (approved), Curricular units 1st sem (without evaluations), Curricular units 2nd sem (enrolled), Curricular units 2nd sem (approved), Curricular units 2nd sem (grade), Unemployment rate, Inflation rate
+
+Final accuracy: 0.7751
+
+---
+
