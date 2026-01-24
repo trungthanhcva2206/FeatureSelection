@@ -1,0 +1,427 @@
+Timestamp: 2026-01-24T07:28:23
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0] | best C: 0.1
+Selected features: 5 / 9868
+SVM grid (C x gamma): 3 x 2 | best: C=1.0, gamma=scale
+CV best scores -> Lasso: 0.8333, SVM: 0.8667
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.4483
+Top coefficients (name, |coef|):
+[('V8311', 0.15438041964052573), ('V3456', 0.09412408040454932), ('V8734', 0.03776918788048413), ('V7301', 0.01135179101205293), ('V7953', 0.005738175377798711), ('V9858', 0.0), ('V33', 0.0), ('V9842', 0.0), ('V17', 0.0), ('V18', 0.0)]
+
+---
+
+Timestamp: 2026-01-24T07:47:07
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: macro-f1
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0] | best C: 2.0
+Selected features: 30 / 9868
+SVM grid (C x gamma): 3 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.6568, SVM: 0.9747
+Test macro-f1: 0.3846 | accuracy: 0.6250 | macro-f1: 0.3846
+Top coefficients (name, |coef|):
+[('V164', 0.802477183441995), ('V3710', 0.5803825589516473), ('V4643', 0.5104966671870077), ('V4270', 0.441187170621349), ('V449', 0.42339446374538164), ('V877', 0.38703961696232475), ('V3417', 0.3726331145985706), ('V6466', 0.36251945965173055), ('V8585', 0.3420966931459041), ('V2906', 0.31477812450189996)]
+
+---
+
+Timestamp: 2026-01-24T07:52:54
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: macro-f1
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 10.0
+Selected features: 64 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=1.0, gamma=scale
+CV best scores -> Lasso: 0.6318, SVM: 0.9747
+Test macro-f1: 0.3333 | accuracy: 0.5000 | macro-f1: 0.3333
+Top coefficients (name, |coef|):
+[('V3710', 0.5871779426136986), ('V164', 0.5756741812933341), ('V4270', 0.5219437693410476), ('V4643', 0.47515770288429776), ('V877', 0.4012326219442663), ('V3417', 0.39734828009292555), ('V1931', 0.38514183389626105), ('V5575', 0.35586001411429596), ('V2906', 0.3090531205079051), ('V8734', 0.26273621338684455)]
+
+---
+
+Timestamp: 2026-01-24T07:53:31
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 2.0
+Selected features: 26 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8167, SVM: 0.9833
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.6444
+Top coefficients (name, |coef|):
+[('V164', 0.7608365888006807), ('V4643', 0.5446912093282764), ('V3710', 0.518111732709235), ('V4270', 0.5036929883891417), ('V3417', 0.42305465321409236), ('V449', 0.4131388153994096), ('V877', 0.40861566635931085), ('V2906', 0.37095744091521277), ('V8585', 0.33154290146897364), ('V6466', 0.3026525287065147)]
+
+---
+
+Timestamp: 2026-01-24T07:59:41
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 0.5
+Selected features: 14 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=2.0, gamma=auto
+CV best scores -> Lasso: 0.8016, SVM: 1.0000
+Test accuracy: 0.6250 | accuracy: 0.6250 | macro-f1: 0.5000
+Top coefficients (name, |coef|):
+[('V5575', 0.9502711064608048), ('V4270', 0.44772671547343984), ('V164', 0.4206217196169681), ('V8734', 0.3396811408499603), ('V3066', 0.3282299244786528), ('V8593', 0.31639747853268), ('V7885', 0.30532402073637105), ('V1654', 0.19311309165135956), ('V7033', 0.16129391129850348), ('V3601', 0.11255161101004829)]
+
+---
+
+Timestamp: 2026-01-24T08:02:58
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 2.0
+Selected features: 27 / 9868
+SVM grid (C x gamma): 7 x 1 | best: C=0.1, gamma=scale
+CV best scores -> Lasso: 0.7798, SVM: 0.9683
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.4483
+Top coefficients (name, |coef|):
+[('V164', 0.8485552541377622), ('V4643', 0.536538366425731), ('V3710', 0.5140318106167976), ('V877', 0.45414559675790156), ('V4270', 0.4485098473075637), ('V449', 0.424948432255529), ('V3417', 0.4087059368511647), ('V2906', 0.3916089810855708), ('V8585', 0.35113139764021223), ('V5575', 0.33099180071094003)]
+
+---
+
+Timestamp: 2026-01-24T08:03:18
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 2.0
+Selected features: 32 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8333, SVM: 0.9833
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.6444
+Top coefficients (name, |coef|):
+[('V164', 0.7346076240801555), ('V4643', 0.5743012354208609), ('V3710', 0.5166352233088143), ('V4270', 0.4953743117361404), ('V2906', 0.4588021094912115), ('V449', 0.45659146101013126), ('V3417', 0.3993770628744634), ('V877', 0.3686588901141977), ('V8585', 0.34131769680963564), ('V5575', 0.3076178271250838)]
+
+---
+
+Timestamp: 2026-01-24T08:11:13
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 2.0
+Selected features: 28 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8167, SVM: 0.9833
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.5897
+Top coefficients (name, |coef|):
+[('V4643', 0.7158939187577105), ('V164', 0.6739420769886306), ('V3710', 0.5370940383556407), ('V4270', 0.45268580714809603), ('V449', 0.4054839298931769), ('V3417', 0.3962418886472471), ('V8585', 0.374856861972328), ('V5575', 0.31621386638809146), ('V877', 0.3123934072090719), ('V2906', 0.3000801119287897)]
+
+---
+
+Timestamp: 2026-01-24T08:12:43
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 1.0
+Selected features: 25 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=1.0, gamma=scale
+CV best scores -> Lasso: 0.8000, SVM: 1.0000
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.5897
+Top coefficients (name, |coef|):
+[('V164', 0.6519790862592081), ('V4643', 0.4473790250123626), ('V3710', 0.43678433091990904), ('V4270', 0.41786790496733994), ('V2906', 0.3950537395543953), ('V449', 0.379455412581058), ('V877', 0.3487275100098795), ('V3417', 0.33131262527244454), ('V8585', 0.3158047229041306), ('V5575', 0.27340799769928015)]
+
+---
+
+Timestamp: 2026-01-24T08:14:20
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 2.0
+Selected features: 29 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8333, SVM: 0.9833
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.5897
+Top coefficients (name, |coef|):
+[('V164', 0.782508113338913), ('V2906', 0.5544584601668824), ('V4643', 0.5517309711191715), ('V3710', 0.543725759429738), ('V4270', 0.5339300234587377), ('V449', 0.4340721446075569), ('V3417', 0.40847783917102326), ('V877', 0.39303964628448596), ('V8585', 0.3646156518747748), ('V5575', 0.2809988475270114)]
+
+---
+
+Timestamp: 2026-01-24T08:15:20
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 10.0
+Selected features: 69 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8000, SVM: 0.9667
+Test accuracy: 0.4375 | accuracy: 0.4375 | macro-f1: 0.3043
+Top coefficients (name, |coef|):
+[('V164', 0.545580458805187), ('V4270', 0.5203920726467114), ('V3710', 0.47335042761874213), ('V4643', 0.4321411348987467), ('V2906', 0.4130134846613547), ('V3417', 0.38892767824485125), ('V1931', 0.37638011252834874), ('V6750', 0.3271529594756968), ('V7953', 0.3121417365766641), ('V2575', 0.29283745881782614)]
+
+---
+
+Timestamp: 2026-01-24T08:15:28
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 5.0
+Selected features: 48 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8000, SVM: 0.9833
+Test accuracy: 0.6250 | accuracy: 0.6250 | macro-f1: 0.3846
+Top coefficients (name, |coef|):
+[('V3710', 0.6168648597469746), ('V164', 0.5974863732058978), ('V4270', 0.5265390953465664), ('V4643', 0.49926088304551197), ('V3417', 0.45398707705117447), ('V1931', 0.43279029798781016), ('V449', 0.3963904921336328), ('V2906', 0.3818643420346594), ('V877', 0.34519601796636185), ('V8585', 0.29500000680109856)]
+
+---
+
+Timestamp: 2026-01-24T08:23:03
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 10.0
+Selected features: 59 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8000, SVM: 0.9667
+Test accuracy: 0.5625 | accuracy: 0.5625 | macro-f1: 0.3600
+Top coefficients (name, |coef|):
+[('V4643', 0.6851435171766507), ('V164', 0.665412789323467), ('V3710', 0.6407164350721545), ('V4270', 0.5224641629416433), ('V3417', 0.4691799413561428), ('V1931', 0.398789024536578), ('V449', 0.35948939106614725), ('V8585', 0.33120580926593757), ('V2906', 0.328089273629327), ('V877', 0.3279642283534435)]
+
+---
+
+Timestamp: 2026-01-24T08:25:39
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 5.0
+Selected features: 51 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8000, SVM: 0.9667
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+Top coefficients (name, |coef|):
+[('V4270', 0.5577043143372241), ('V3710', 0.5394318252871398), ('V164', 0.5171365652052291), ('V4643', 0.5066457059360302), ('V3417', 0.4527318768152521), ('V5575', 0.35145071006521345), ('V877', 0.345885880925537), ('V449', 0.3395851019155969), ('V8585', 0.2852978365503275), ('V7953', 0.2706907813949486)]
+
+---
+
+Timestamp: 2026-01-24T08:27:31
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 5.0
+Selected features: 51 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8000, SVM: 0.9667
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+Top coefficients (name, |coef|):
+[('V4270', 0.5577043143372241), ('V3710', 0.5394318252871398), ('V164', 0.5171365652052291), ('V4643', 0.5066457059360302), ('V3417', 0.4527318768152521), ('V5575', 0.35145071006521345), ('V877', 0.345885880925537), ('V449', 0.3395851019155969), ('V8585', 0.2852978365503275), ('V7953', 0.2706907813949486)]
+
+---
+
+Timestamp: 2026-01-24T08:28:45
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 5.0
+Selected features: 51 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8000, SVM: 0.9667
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+Top coefficients (name, |coef|):
+[('V4270', 0.5577043143372241), ('V3710', 0.5394318252871398), ('V164', 0.5171365652052291), ('V4643', 0.5066457059360302), ('V3417', 0.4527318768152521), ('V5575', 0.35145071006521345), ('V877', 0.345885880925537), ('V449', 0.3395851019155969), ('V8585', 0.2852978365503275), ('V7953', 0.2706907813949486)]
+
+---
+
+Timestamp: 2026-01-24T08:35:32
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 2.0
+Selected features: 26 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8167, SVM: 0.9833
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.5897
+Top coefficients (name, |coef|):
+[('V164', 0.7308094487802964), ('V4643', 0.5968095753701257), ('V3710', 0.5159221054294368), ('V4270', 0.4804139259652365), ('V449', 0.4757036220818445), ('V2906', 0.4288056239514145), ('V877', 0.3944641843895427), ('V3417', 0.37669031956342364), ('V8585', 0.33934481639026776), ('V5575', 0.3343375007106065)]
+
+---
+
+Timestamp: 2026-01-24T08:37:48
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.01, 0.05, 0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 0.01
+Selected features: 10 / 9868
+SVM grid (C x gamma): 6 x 2 | best: C=1.0, gamma=auto
+CV best scores -> Lasso: 0.8500, SVM: 0.8500
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.4483
+Top coefficients (name, |coef|):
+[('V2', 0.0), ('V9869', 0.0), ('V9868', 0.0), ('V9867', 0.0), ('V9866', 0.0), ('V9865', 0.0), ('V9864', 0.0), ('V9863', 0.0), ('V9862', 0.0), ('V9861', 0.0)]
+
+---
+
+Timestamp: 2026-01-24T08:38:25
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 0.5
+Selected features: 22 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.7833, SVM: 0.9833
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.5897
+Top coefficients (name, |coef|):
+[('V164', 0.5124981654451218), ('V4643', 0.4173733108156366), ('V3710', 0.3765220807231697), ('V877', 0.3360684698474593), ('V8585', 0.27567627023686325), ('V4270', 0.269682880297116), ('V2906', 0.2559206300036939), ('V3417', 0.22601785562867793), ('V5575', 0.2182414159591833), ('V449', 0.1997926171946432)]
+
+---
+
+Timestamp: 2026-01-24T08:38:51
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 10.0
+Selected features: 60 / 9868
+SVM grid (C x gamma): 7 x 1 | best: C=0.1, gamma=scale
+CV best scores -> Lasso: 0.7956, SVM: 0.9524
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+Top coefficients (name, |coef|):
+[('V3710', 0.6133564714328953), ('V4270', 0.602347423191336), ('V164', 0.5984307316102317), ('V4643', 0.5208984346824304), ('V3417', 0.47623994238668343), ('V1931', 0.43120434892711046), ('V8585', 0.35887167666596664), ('V877', 0.34291489818568455), ('V2906', 0.2932027462671645), ('V6750', 0.2753853307773716)]
+
+---
+
+Timestamp: 2026-01-24T08:39:19
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 2.0
+Selected features: 26 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8000, SVM: 0.9833
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.6444
+Top coefficients (name, |coef|):
+[('V164', 0.7765526096077947), ('V4643', 0.590159928658258), ('V3710', 0.521421065118408), ('V4270', 0.5127501610080739), ('V2906', 0.43340961713750964), ('V449', 0.4278156716478002), ('V8585', 0.3920137990230981), ('V3417', 0.38824975881699114), ('V877', 0.3815614190699968), ('V6466', 0.2971229206620446)]
+
+---
+
+Timestamp: 2026-01-24T08:40:09
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 1.0
+Selected features: 24 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8167, SVM: 0.9833
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.5897
+Top coefficients (name, |coef|):
+[('V164', 0.6797926077509827), ('V4643', 0.4847584324625205), ('V4270', 0.41095317935209574), ('V3710', 0.4070593828053049), ('V877', 0.3875680212905933), ('V449', 0.358714566057119), ('V3417', 0.3305909260401389), ('V8585', 0.3197717143961057), ('V2906', 0.30275558915530065), ('V5575', 0.2713534267526483)]
+
+---
+
+Timestamp: 2026-01-24T08:40:22
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 10.0
+Selected features: 59 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8000, SVM: 0.9667
+Test accuracy: 0.6250 | accuracy: 0.6250 | macro-f1: 0.3846
+Top coefficients (name, |coef|):
+[('V164', 0.6170642246022862), ('V3710', 0.5705847572505175), ('V4270', 0.5666972923546472), ('V4643', 0.5281284362377705), ('V877', 0.46182647219430634), ('V3417', 0.45069812258741904), ('V1931', 0.42925465313678357), ('V2906', 0.4060817148482544), ('V449', 0.3637748494847297), ('V7953', 0.27997117757471857)]
+
+---
+
+Timestamp: 2026-01-24T08:49:09
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 2.0
+Selected features: 27 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8000, SVM: 0.9833
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.6444
+Top coefficients (name, |coef|):
+[('V164', 0.8230325599550578), ('V4643', 0.5419023386679975), ('V3710', 0.525784626941326), ('V449', 0.4707177851255427), ('V4270', 0.4615109198578717), ('V877', 0.4257255033572037), ('V2906', 0.39926087678787203), ('V3417', 0.3909983227474478), ('V6466', 0.3520414508382127), ('V8585', 0.3273191882928062)]
+
+---
+
+Timestamp: 2026-01-24T08:49:15
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 2.0
+Selected features: 25 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8167, SVM: 0.9833
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.6444
+Top coefficients (name, |coef|):
+[('V164', 0.8132056071800541), ('V4643', 0.5333971458140969), ('V3710', 0.5285481114247641), ('V449', 0.4735216275085169), ('V4270', 0.47135991858195286), ('V2906', 0.4176244698061699), ('V3417', 0.4049569263910807), ('V877', 0.38582924608954416), ('V8585', 0.3578665454501051), ('V6466', 0.3336307112562448)]
+
+---
+
+Timestamp: 2026-01-24T08:53:48
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 2.0
+Selected features: 27 / 9868
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.8167, SVM: 0.9833
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.6444
+Top coefficients (name, |coef|):
+[('V164', 0.8017005132617462), ('V4643', 0.6357777833299727), ('V3710', 0.5588010219504449), ('V4270', 0.4791675024515481), ('V2906', 0.47321452000336134), ('V449', 0.40462616719627825), ('V3417', 0.3993468912718544), ('V877', 0.3819041032355965), ('V8585', 0.3669229529281061), ('V6466', 0.3040292082346882)]
+
+---
+
+Timestamp: 2026-01-24T08:57:52
+Dataset: Brain.csv
+Samples: 42 | Features: 5597
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Lasso C grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0] | best C: 2.0
+Selected features: 585 / 5597
+SVM grid (C x gamma): 5 x 2 | best: C=0.5, gamma=scale
+CV best scores -> Lasso: 0.9095, SVM: 0.9714
+Test accuracy: 0.5556 | accuracy: 0.5556 | macro-f1: 0.4076
+Top coefficients (name, |coef|):
+[('V2730', 0.15065917043526622), ('V4050', 0.10965635550100859), ('V2037', 0.09353797879564087), ('V2639', 0.09346546357794978), ('V2522', 0.09308074117117877), ('V1735', 0.09245032045326022), ('V5069', 0.08825340567006705), ('V571', 0.08707079950815472), ('V846', 0.08444418249109192), ('V191', 0.08429345217134047)]
+
+---
+
