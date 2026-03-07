@@ -1,0 +1,64 @@
+Timestamp: 2026-01-31T11:59:24
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Block size: 10 | blocks: 987
+Ridge alpha grid: [0.1, 1.0, 5.0, 10.0] | top-k per block: 3
+Selected union size: 2961
+SVM grid C: [0.1, 1.0, 10.0], gamma: ['scale', 'auto'], kernel: linear | best: C=0.1, gamma=scale
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+Selected feature indices (first 20):
+[('V5', 3.0), ('V23', 21.0), ('V30', 28.0), ('V35', 33.0), ('V39', 37.0), ('V48', 46.0), ('V49', 47.0), ('V52', 50.0), ('V57', 55.0), ('V58', 56.0), ('V63', 61.0), ('V65', 63.0), ('V75', 73.0), ('V79', 77.0), ('V82', 80.0), ('V84', 82.0), ('V87', 85.0), ('V89', 87.0), ('V92', 90.0), ('V93', 91.0)]
+
+---
+
+Timestamp: 2026-01-31T12:00:09
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Block size: 100 | blocks: 99
+Ridge alpha grid: [0.1, 1.0, 5.0, 10.0] | top-k per block: 3
+Selected union size: 297
+SVM grid C: [0.1, 1.0, 10.0], gamma: ['scale', 'auto'], kernel: linear | best: C=0.1, gamma=scale
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+Selected feature indices (first 20):
+[('V52', 50.0), ('V57', 55.0), ('V65', 63.0), ('V125', 123.0), ('V129', 127.0), ('V164', 162.0), ('V187', 185.0), ('V257', 255.0), ('V277', 275.0), ('V317', 315.0), ('V328', 326.0), ('V334', 332.0), ('V362', 360.0), ('V408', 406.0), ('V415', 413.0), ('V444', 442.0), ('V447', 445.0), ('V460', 458.0), ('V503', 501.0), ('V506', 504.0)]
+
+---
+
+Timestamp: 2026-01-31T12:06:05
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Block size: 10 | blocks: 987
+Ridge alpha grid: [0.1, 1.0, 5.0, 10.0] | k grid per block: [1, 2, 3, 5]
+Selected union size: 3028
+SVM grid C: [0.1, 1.0, 10.0], gamma: ['scale', 'auto'], kernel: linear | best: C=0.1, gamma=scale
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+Selected feature indices (first 20):
+[('V5', 3.0), ('V22', 20.0), ('V27', 25.0), ('V30', 28.0), ('V36', 34.0), ('V39', 37.0), ('V49', 47.0), ('V52', 50.0), ('V53', 51.0), ('V57', 55.0), ('V63', 61.0), ('V65', 63.0), ('V74', 72.0), ('V75', 73.0), ('V79', 77.0), ('V81', 79.0), ('V82', 80.0), ('V89', 87.0), ('V90', 88.0), ('V92', 90.0)]
+
+---
+
+Timestamp: 2026-01-31T12:08:21
+Dataset: Brain.csv
+Samples: 42 | Features: 5597
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Block size: 10 | blocks: 560
+Ridge alpha grid: [0.1, 1.0, 5.0, 10.0] | k grid per block: [1, 2, 3, 5]
+Selected union size: 2425
+SVM grid C: [0.1, 1.0, 10.0], gamma: ['scale', 'auto'], kernel: linear | best: C=0.1, gamma=scale
+Test accuracy: 0.6667 | accuracy: 0.6667 | macro-f1: 0.6333
+Selected feature indices (first 20):
+[('V12', 10.0), ('V14', 12.0), ('V15', 13.0), ('V17', 15.0), ('V18', 16.0), ('V19', 17.0), ('V22', 20.0), ('V24', 22.0), ('V26', 24.0), ('V27', 25.0), ('V28', 26.0), ('V29', 27.0), ('V30', 28.0), ('V31', 29.0), ('V32', 30.0), ('V34', 32.0), ('V35', 33.0), ('V39', 37.0), ('V41', 39.0), ('V43', 41.0)]
+
+---
+

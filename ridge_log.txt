@@ -1,0 +1,48 @@
+Timestamp: 2026-01-31T11:12:04
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Ridge alpha grid: [0.1, 1.0, 5.0, 10.0] | best alpha: 0.1
+CV best score: 0.8500
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+
+---
+
+Timestamp: 2026-01-31T11:54:31
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Ridge alpha grid: [0.1, 1.0, 5.0, 10.0] | best alpha: 0.1
+CV best score: 0.8500
+Top 20 coefficients by |coef| (name, value):
+[('V164', 0.00825582001550088), ('V2575', 0.006739665294065999), ('V1931', 0.006388942096374934), ('V4967', 0.006197819940417848), ('V5799', 0.0053621427778877745), ('V7424', 0.004950660621051609), ('V9742', 0.004947347645633498), ('V3601', 0.004613394646794983), ('V7906', 0.004545285919511222), ('V2937', 0.00439879897220657), ('V1519', 0.004289574415467101), ('V4173', 0.004042376702111444), ('V3417', 0.004038030328030082), ('V1351', 0.004037433560601653), ('V1027', 0.003870851259256478), ('V9626', 0.003672947896279217), ('V877', 0.0035690878614340316), ('V1052', 0.0035118455869616893), ('V4067', 0.0035118455869616854), ('V5851', 0.003511845586961684)]
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+SVM full features -> best C: 0.1, best gamma: scale, CV score: 0.8500
+SVM full test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+SVM on Ridge top-k -> k grid: [5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 8000], best k: 500, best C: 0.1, best gamma: scale, CV score: 0.9333
+SVM top-k test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+
+---
+
+Timestamp: 2026-01-31T12:08:54
+Dataset: Brain.csv
+Samples: 42 | Features: 5597
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Ridge alpha grid: [0.1, 1.0, 5.0, 10.0] | best alpha: 0.1
+CV best score: 0.8238
+Top 20 coefficients by |coef| (name, value):
+[('V2730', 0.002948535948067948), ('V4050', 0.0028711077332314624), ('V2592', 0.0027632111858693254), ('V2522', 0.002757100992252832), ('V1292', 0.0027398529870698196), ('V4705', 0.0027017823274021087), ('V2377', 0.002698034816919933), ('V846', 0.002616088475328159), ('V191', 0.0025576368234425644), ('V1072', 0.002492431993488268), ('V2068', 0.0024836218902625678), ('V2725', 0.0024735587785249457), ('V1164', 0.00246344653769971), ('V95', 0.0024578381064823615), ('V1961', 0.002425202624888496), ('V3764', 0.0023979835361294635), ('V4843', 0.0023867408032782595), ('V3206', 0.002379230484252666), ('V5069', 0.0023542283642728422), ('V4750', 0.0023382708701552217)]
+Test accuracy: 0.6667 | accuracy: 0.6667 | macro-f1: 0.6476
+SVM full features -> best C: 0.1, best gamma: scale, CV score: 0.7619
+SVM full test accuracy: 0.6667 | accuracy: 0.6667 | macro-f1: 0.6333
+SVM on Ridge top-k -> k grid: [5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 8000], best k: 50, best C: 0.1, best gamma: scale, CV score: 1.0000
+SVM top-k test accuracy: 0.6667 | accuracy: 0.6667 | macro-f1: 0.7000
+
+---
+

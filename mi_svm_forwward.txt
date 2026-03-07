@@ -1,0 +1,25 @@
+Timestamp: 2026-03-07T10:19:15
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric for CV: macro-f1
+MI mode: knn
+SVM kernel=rbf, C=1.0, gamma=scale, class_weight=None
+
+MI k search (train CV):
+  k=10: mean macro-f1=0.6885
+  k=50: mean macro-f1=0.4593
+  k=100: mean macro-f1=0.4593
+  k=200: mean macro-f1=0.4593
+Chosen k=10
+Selected features (MI): 10
+Test with MI-only set -> accuracy=0.7500, macro-f1=0.4286
+
+Forward wrapper on MI pool:
+  Step 1: +V7459 -> CV macro-f1=0.7547
+  Step 2: +V3456 -> CV macro-f1=0.8309
+Final forward set size: 2
+Test with forward set -> accuracy=0.7500, macro-f1=0.4286
+
+---
+

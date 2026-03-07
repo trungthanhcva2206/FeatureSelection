@@ -1,0 +1,32 @@
+Timestamp: 2026-02-07T11:18:37
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Block size: 50 | blocks: 198
+RF grid: {'n_estimators': [100], 'max_depth': [None, 10], 'max_features': ['sqrt'], 'min_samples_leaf': [1, 2]} | k grid per block: [1, 2]
+Selected union size: 354
+SVM grid C: [1.0], gamma: ['scale', 'auto'], kernel: linear | best: C=1.0, gamma=scale
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.4483
+Selected feature indices (first 20):
+[('V49', 47.0), ('V52', 50.0), ('V65', 63.0), ('V79', 77.0), ('V151', 149.0), ('V165', 163.0), ('V236', 234.0), ('V416', 414.0), ('V506', 504.0), ('V569', 567.0), ('V614', 612.0), ('V673', 671.0), ('V677', 675.0), ('V699', 697.0), ('V708', 706.0), ('V712', 710.0), ('V752', 750.0), ('V783', 781.0), ('V795', 793.0), ('V834', 832.0)]
+
+---
+
+Timestamp: 2026-02-07T11:34:35
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+Block size: 50 | blocks: 198
+RF grid: {'n_estimators': [200], 'max_depth': [None, 10], 'max_features': ['sqrt'], 'min_samples_leaf': [1, 2]} | k grid per block: [1, 2]
+Selected union size: 359
+SVM grid C: [1.0], gamma: ['scale', 'auto'], kernel: linear | best: C=1.0, gamma=scale
+Test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+Selected feature indices (first 20):
+[('V49', 47.0), ('V52', 50.0), ('V65', 63.0), ('V79', 77.0), ('V102', 100.0), ('V151', 149.0), ('V165', 163.0), ('V220', 218.0), ('V236', 234.0), ('V416', 414.0), ('V506', 504.0), ('V560', 558.0), ('V569', 567.0), ('V614', 612.0), ('V640', 638.0), ('V677', 675.0), ('V699', 697.0), ('V708', 706.0), ('V783', 781.0), ('V795', 793.0)]
+
+---
+

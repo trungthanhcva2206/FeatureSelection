@@ -1,0 +1,84 @@
+Timestamp: 2026-01-31T11:09:46
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+RF grid: {'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'n_estimators': 200}
+CV best score: 0.8500
+Top 20 features by importance (name, importance):
+[('V8369', 0.006616048074275791), ('V3628', 0.005582293079977524), ('V7246', 0.005251318271785159), ('V4365', 0.004894464627524511), ('V6810', 0.004828315451146613), ('V4326', 0.004771962948753401), ('V3623', 0.004735441961178571), ('V1636', 0.0047164809727614386), ('V7137', 0.004156394736154823), ('V1104', 0.004063973312813648), ('V8195', 0.003898844706678242), ('V7909', 0.0038530219780219766), ('V6039', 0.0038297721630322907), ('V6272', 0.003827225130890052), ('V2199', 0.0038056542514089673), ('V2249', 0.003793103448275861), ('V6195', 0.0037635756056808556), ('V1337', 0.003751327971161795), ('V7898', 0.0037078053970403314), ('V7032', 0.0036984126984126865)]
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.4483
+
+---
+
+Timestamp: 2026-01-31T11:30:36
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+RF grid: {'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'n_estimators': 200}
+CV best score: 0.8500
+Top 20 features by importance (name, importance):
+[('V8369', 0.006616048074275791), ('V3628', 0.005582293079977524), ('V7246', 0.005251318271785159), ('V4365', 0.004894464627524511), ('V6810', 0.004828315451146613), ('V4326', 0.004771962948753401), ('V3623', 0.004735441961178571), ('V1636', 0.0047164809727614386), ('V7137', 0.004156394736154823), ('V1104', 0.004063973312813648), ('V8195', 0.003898844706678242), ('V7909', 0.0038530219780219766), ('V6039', 0.0038297721630322907), ('V6272', 0.003827225130890052), ('V2199', 0.0038056542514089673), ('V2249', 0.003793103448275861), ('V6195', 0.0037635756056808556), ('V1337', 0.003751327971161795), ('V7898', 0.0037078053970403314), ('V7032', 0.0036984126984126865)]
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.4483
+SVM on RF top-k -> k grid: [5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 8000], best k: 50, best C: 0.1, best gamma: scale, CV score: 0.9000
+SVM test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+
+---
+
+Timestamp: 2026-01-31T11:47:42
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+RF grid: {'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'n_estimators': 200}
+CV best score: 0.8500
+Top 20 features by importance (name, importance):
+[('V8369', 0.006616048074275791), ('V3628', 0.005582293079977524), ('V7246', 0.005251318271785159), ('V4365', 0.004894464627524511), ('V6810', 0.004828315451146613), ('V4326', 0.004771962948753401), ('V3623', 0.004735441961178571), ('V1636', 0.0047164809727614386), ('V7137', 0.004156394736154823), ('V1104', 0.004063973312813648), ('V8195', 0.003898844706678242), ('V7909', 0.0038530219780219766), ('V6039', 0.0038297721630322907), ('V6272', 0.003827225130890052), ('V2199', 0.0038056542514089673), ('V2249', 0.003793103448275861), ('V6195', 0.0037635756056808556), ('V1337', 0.003751327971161795), ('V7898', 0.0037078053970403314), ('V7032', 0.0036984126984126865)]
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.4483
+SVM full features -> best C: 0.1, best gamma: scale, CV score: 0.8500
+SVM full test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+SVM on RF top-k -> k grid: [5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 8000], best k: 50, best C: 0.1, best gamma: scale, CV score: 0.9000
+SVM test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+
+---
+
+Timestamp: 2026-02-07T10:59:08
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+RF grid: {'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'n_estimators': 200}
+CV best score: 0.8500
+Top 20 features by importance (name, importance):
+[('V8369', 0.006616048074275791), ('V3628', 0.005582293079977524), ('V7246', 0.005251318271785159), ('V4365', 0.004894464627524511), ('V6810', 0.004828315451146613), ('V4326', 0.004771962948753401), ('V3623', 0.004735441961178571), ('V1636', 0.0047164809727614386), ('V7137', 0.004156394736154823), ('V1104', 0.004063973312813648), ('V8195', 0.003898844706678242), ('V7909', 0.0038530219780219766), ('V6039', 0.0038297721630322907), ('V6272', 0.003827225130890052), ('V2199', 0.0038056542514089673), ('V2249', 0.003793103448275861), ('V6195', 0.0037635756056808556), ('V1337', 0.003751327971161795), ('V7898', 0.0037078053970403314), ('V7032', 0.0036984126984126865)]
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.4483
+SVM full features -> best C: 0.1, best gamma: scale, CV score: 0.8500
+SVM full test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+SVM on RF top-k -> k grid: [5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 8000], best k: 50, best C: 0.1, best gamma: scale, CV score: 0.9000
+SVM test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+
+---
+
+Timestamp: 2026-02-07T11:00:17
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric: accuracy
+Class weight balanced: True
+RF grid: {'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'n_estimators': 200}
+CV best score: 0.8333
+Top 20 features by importance (name, importance):
+[('V5993', 0.011947265428766196), ('V7459', 0.011298624964909599), ('V8616', 0.009697726494069454), ('V4883', 0.009313718198012258), ('V4365', 0.00827991908430141), ('V7625', 0.008269879624878771), ('V7964', 0.00790024434396314), ('V214', 0.00785158029075643), ('V868', 0.0073891583553433015), ('V9816', 0.007036689267190217), ('V6810', 0.006566002855212596), ('V9626', 0.00619198089347343), ('V5158', 0.006022252616285664), ('V1104', 0.005937364761547559), ('V4007', 0.005834429254467783), ('V9861', 0.0058290288976177084), ('V5351', 0.005473328324567991), ('V1872', 0.005309507793070007), ('V4435', 0.0052302673302988345), ('V7372', 0.005207499004261281)]
+Test accuracy: 0.8125 | accuracy: 0.8125 | macro-f1: 0.4483
+SVM full features -> best C: 0.1, best gamma: scale, CV score: 0.8500
+SVM full test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+SVM on RF top-k -> k grid: [5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 8000], best k: 200, best C: 0.1, best gamma: scale, CV score: 0.9000
+SVM test accuracy: 0.7500 | accuracy: 0.7500 | macro-f1: 0.4286
+
+---
+
