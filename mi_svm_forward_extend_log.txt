@@ -1,0 +1,92 @@
+Timestamp: 2026-03-14T09:28:04
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric (CV): macro-f1
+MI mode: knn
+Chosen k=10 from grid [10, 50, 100, 200] | base features: 10
+MI k search (train CV):
+  k=10: mean macro-f1=0.6885
+  k=50: mean macro-f1=0.4593
+  k=100: mean macro-f1=0.4593
+  k=200: mean macro-f1=0.4593
+Base set test -> accuracy=0.7500, macro-f1=0.4286
+Forward extension (adds outside base):
+  Step 1: +V783 -> CV macro-f1=0.8857
+  Step 2: +V1510 -> CV macro-f1=0.9238
+Final forward size: 12 | base size: 10
+Test with forward set -> accuracy=0.8125, macro-f1=0.4483
+
+---
+
+Timestamp: 2026-03-14T09:50:28
+Dataset: Brain.csv
+Samples: 42 | Features: 5597
+Train/Test split: 0.80/0.20 (stratified)
+Metric (CV): macro-f1
+MI mode: knn
+Chosen k=50 from grid [10, 50, 100, 200] | base features: 50
+MI k search (train CV):
+  k=50: mean macro-f1=0.8253
+  k=100: mean macro-f1=0.8120
+  k=200: mean macro-f1=0.7600
+  k=10: mean macro-f1=0.6773
+Base set test -> accuracy=0.5556, macro-f1=0.5467
+Forward extension (adds outside base):
+  Step 1: +V1735 -> CV macro-f1=0.9200
+  Step 2: +V956 -> CV macro-f1=0.9467
+Final forward size: 52 | base size: 50
+Test with forward set -> accuracy=0.5556, macro-f1=0.5467
+
+---
+
+Timestamp: 2026-03-14T09:53:40
+Dataset: Brain.csv
+Samples: 42 | Features: 5597
+Train/Test split: 0.80/0.20 (stratified)
+Metric (CV): macro-f1
+MI mode: knn
+Chosen k=100 from grid [10, 50, 100, 200] | base features: 100
+MI k search (train CV):
+  k=100: mean macro-f1=0.7635
+  k=10: mean macro-f1=0.7568
+  k=50: mean macro-f1=0.6851
+  k=200: mean macro-f1=0.6816
+Base set test -> accuracy=0.6667, macro-f1=0.6476
+Forward extension (adds outside base):
+  Step 1: +V14 -> CV macro-f1=0.8365
+  Step 2: +V3206 -> CV macro-f1=0.8683
+  Step 3: +V2217 -> CV macro-f1=0.8971
+Final forward size: 103 | base size: 100
+Test with forward set -> accuracy=0.5556, macro-f1=0.5810
+
+---
+
+Timestamp: 2026-03-14T10:03:27
+Dataset: Breast3classes.csv
+Samples: 95 | Features: 4869
+Train/Test split: 0.80/0.20 (stratified)
+Metric (CV): macro-f1
+MI mode: knn
+Chosen k=10 from grid [10, 50, 100, 200] | base features: 10
+MI k search (train CV):
+  k=10: mean macro-f1=0.7088
+  k=100: mean macro-f1=0.6972
+  k=50: mean macro-f1=0.6683
+  k=200: mean macro-f1=0.6178
+Base set test -> accuracy=0.4211, macro-f1=0.3667
+Forward extension (adds outside base):
+  Step 1: +V4699 -> CV macro-f1=0.7678
+  Step 2: +V755 -> CV macro-f1=0.8060
+  Step 3: +V1292 -> CV macro-f1=0.8328
+  Step 4: +V2535 -> CV macro-f1=0.8510
+  Step 5: +V4446 -> CV macro-f1=0.8662
+  Step 6: +V4097 -> CV macro-f1=0.8801
+  Step 7: +V1305 -> CV macro-f1=0.9021
+  Step 8: +V913 -> CV macro-f1=0.9042
+  Step 9: +V3253 -> CV macro-f1=0.9052
+Final forward size: 19 | base size: 10
+Test with forward set -> accuracy=0.4211, macro-f1=0.4269
+
+---
+

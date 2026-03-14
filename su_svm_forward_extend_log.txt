@@ -1,0 +1,69 @@
+Timestamp: 2026-03-14T09:40:17
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric (CV): macro-f1
+SU mode: bins=10
+Chosen k=100 from grid [10, 50, 100, 200] | base features: 100
+SU k search (train CV):
+  k=100: mean macro-f1=0.4593
+  k=200: mean macro-f1=0.4593
+  k=10: mean macro-f1=0.4541
+  k=50: mean macro-f1=0.4541
+Base set test -> accuracy=0.8125, macro-f1=0.4483
+Forward extension (adds outside base):
+Final forward size: 100 | base size: 100
+Test with forward set -> accuracy=0.8125, macro-f1=0.4483
+
+---
+
+Timestamp: 2026-03-14T09:44:42
+Dataset: Brain.csv
+Samples: 42 | Features: 5597
+Train/Test split: 0.80/0.20 (stratified)
+Metric (CV): macro-f1
+SU mode: bins=10
+Chosen k=50 from grid [10, 50, 100, 200] | base features: 50
+SU k search (train CV):
+  k=50: mean macro-f1=0.7600
+  k=100: mean macro-f1=0.7600
+  k=200: mean macro-f1=0.7600
+  k=10: mean macro-f1=0.5287
+Base set test -> accuracy=0.6667, macro-f1=0.6267
+Forward extension (adds outside base):
+  Step 1: +V1292 -> CV macro-f1=0.8400
+  Step 2: +V23 -> CV macro-f1=0.8453
+  Step 3: +V1666 -> CV macro-f1=0.8507
+Final forward size: 53 | base size: 50
+Test with forward set -> accuracy=0.6667, macro-f1=0.6267
+
+---
+
+Timestamp: 2026-03-14T10:10:30
+Dataset: Breast3classes.csv
+Samples: 95 | Features: 4869
+Train/Test split: 0.80/0.20 (stratified)
+Metric (CV): macro-f1
+SU mode: bins=10
+Chosen k=50 from grid [10, 50, 100, 200] | base features: 50
+SU k search (train CV):
+  k=50: mean macro-f1=0.6551
+  k=100: mean macro-f1=0.6381
+  k=10: mean macro-f1=0.6289
+  k=200: mean macro-f1=0.5597
+Base set test -> accuracy=0.4737, macro-f1=0.5094
+Forward extension (adds outside base):
+  Step 1: +V3945 -> CV macro-f1=0.7122
+  Step 2: +V3002 -> CV macro-f1=0.7430
+  Step 3: +V370 -> CV macro-f1=0.7630
+  Step 4: +V430 -> CV macro-f1=0.7974
+  Step 5: +V3790 -> CV macro-f1=0.8127
+  Step 6: +V2273 -> CV macro-f1=0.8392
+  Step 7: +V1483 -> CV macro-f1=0.8498
+  Step 8: +V4489 -> CV macro-f1=0.8593
+  Step 9: +V3 -> CV macro-f1=0.8702
+Final forward size: 59 | base size: 50
+Test with forward set -> accuracy=0.6316, macro-f1=0.6417
+
+---
+

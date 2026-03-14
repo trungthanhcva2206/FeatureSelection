@@ -23,3 +23,59 @@ Test with forward set -> accuracy=0.7500, macro-f1=0.4286
 
 ---
 
+Timestamp: 2026-03-14T11:38:44
+Dataset: Breast3classes.csv
+Samples: 95 | Features: 4869
+Train/Test split: 0.80/0.20 (stratified)
+Metric for CV: macro-f1
+MI mode: knn
+SVM kernel=rbf, C=1.0, gamma=scale, class_weight=None
+
+MI k search (train CV):
+  k=10: mean macro-f1=0.7088
+  k=100: mean macro-f1=0.6972
+  k=50: mean macro-f1=0.6683
+  k=200: mean macro-f1=0.6178
+Chosen k=10
+Selected features (MI): 10
+Test with MI-only set -> accuracy=0.4211, macro-f1=0.3667
+
+Forward wrapper on MI pool:
+  Step 1: +V3145 -> CV macro-f1=0.6400
+  Step 2: +V3477 -> CV macro-f1=0.7154
+Final forward set size: 2
+Test with forward set -> accuracy=0.5263, macro-f1=0.5463
+
+---
+
+Timestamp: 2026-03-14T11:41:53
+Dataset: Lung_cancer.csv
+Samples: 203 | Features: 12600
+Train/Test split: 0.80/0.20 (stratified)
+Metric for CV: macro-f1
+MI mode: knn
+SVM kernel=rbf, C=1.0, gamma=scale, class_weight=None
+
+MI k search (train CV):
+  k=10: mean macro-f1=0.8750
+  k=50: mean macro-f1=0.8638
+  k=200: mean macro-f1=0.8571
+  k=100: mean macro-f1=0.8506
+Chosen k=10
+Selected features (MI): 10
+Test with MI-only set -> accuracy=0.8780, macro-f1=0.6556
+
+Forward wrapper on MI pool:
+  Step 1: +V4984 -> CV macro-f1=0.4547
+  Step 2: +V10892 -> CV macro-f1=0.6255
+  Step 3: +V1423 -> CV macro-f1=0.6807
+  Step 4: +V10140 -> CV macro-f1=0.7163
+  Step 5: +V8485 -> CV macro-f1=0.8435
+  Step 6: +V9094 -> CV macro-f1=0.8656
+  Step 7: +V3121 -> CV macro-f1=0.8741
+  Step 8: +V3192 -> CV macro-f1=0.8825
+Final forward set size: 8
+Test with forward set -> accuracy=0.8780, macro-f1=0.6556
+
+---
+

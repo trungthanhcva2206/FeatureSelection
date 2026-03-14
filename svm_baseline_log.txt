@@ -1,0 +1,17 @@
+Timestamp: 2026-03-14T11:06:45
+Dataset: adenocarcinoma.csv
+Samples: 76 | Features: 9868
+Train/Test split: 0.80/0.20 (stratified)
+Metric (CV): macro-f1
+Best params: C=0.1, gamma=scale, kernel=rbf | class_weight=None
+CV scores (sorted):
+  C=0.1, gamma=scale, kernel=rbf -> macro-f1=0.4593
+  C=0.1, gamma=auto, kernel=rbf -> macro-f1=0.4593
+  C=1.0, gamma=scale, kernel=rbf -> macro-f1=0.4593
+  C=1.0, gamma=auto, kernel=rbf -> macro-f1=0.4593
+  C=10.0, gamma=scale, kernel=rbf -> macro-f1=0.4593
+  C=10.0, gamma=auto, kernel=rbf -> macro-f1=0.4593
+Test -> accuracy=0.8125, macro-f1=0.4483
+
+---
+
